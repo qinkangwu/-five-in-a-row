@@ -7,6 +7,11 @@ var wins = [];
 
 var myWin = [];
 var computerWin = [];
+function Fn(){}
+var fn2 = {};
+var fn1 = new Fn();
+console.log(Object.__proto__===Function.prototype);
+
 
 for(var i = 0 ; i < 15 ; i ++){
     chessBoard[i]=[];
@@ -59,7 +64,6 @@ for(var i = 0 ; i < 11 ; i ++){
 }
 
 
-console.log(count);
 
 for(var i = 0 ; i < count ; i ++){
     myWin[i] = 0;
@@ -110,12 +114,8 @@ chess.onclick=function(e){
     }
     var x = e.offsetX;
     var y = e.offsetY;
-    console.log('x='+x);
-    console.log('y='+y);
     var i = Math.floor(x/30);
     var j = Math.floor(y/30);
-    console.log('i='+i);
-    console.log('j='+j);
 
     if(chessBoard[i][j] === 0 ){
         oneStep(i,j,me);
